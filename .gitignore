@@ -1,0 +1,8 @@
+# Bỏ qua file tạm thời
+temp.txt
+
+# Bỏ qua thư mục build
+/build/
+
+# Bỏ qua tất cả các file với phần mở rộng .log
+*.log

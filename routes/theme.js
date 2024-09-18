@@ -14,8 +14,8 @@ router.get("/dashboard", function (req, res, next) {
 });
 
 router.get("/list-book(/:status)?", async function (req, res, next) {
-  const currentStatus = req.params.status || "all";
-  const keyWord = req.query.search || "";
+  const currentStatus = utilsHelper.getParam(req.params, "status", "all");
+  const keyWord = utilsHelper.getParam(req.query, "search", "");
   let objQuery = {};
   let formattedKeyWord = keyWord?.replace(/\s/g, "");
   const statusFilter = await utilsHelper.filterStatus(currentStatus, keyWord);

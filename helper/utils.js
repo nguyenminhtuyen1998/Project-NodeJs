@@ -49,6 +49,15 @@ let filterStatus = async (currentStatus, keyWord) => {
   return statusFilter;
 };
 
+let getParam = (params, property, defaultvalue) => {
+  if (params.hasOwnProperty(property) && params.property !== undefined) {
+    return params.property;
+  }
+
+  return defaultvalue;
+};
+
 module.exports = {
   filterStatus,
+  getParam,
 };

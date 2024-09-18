@@ -6,3 +6,7 @@ temp.txt
 
 # Bỏ qua tất cả các file với phần mở rộng .log
 *.log
+
+*.d.ts
+
+node_modules/
